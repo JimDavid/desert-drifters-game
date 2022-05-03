@@ -1,7 +1,7 @@
 # desert-drifters-game
 Desert Drifters Game preview material
 
-3rd person game, custom scripts
+3rd person game, custom C# scripts
 
 1. Audio Low Pass Filter detection script: 
   Script dat afstand meet van speler tot binnenruimtes en low pass filter inzet op buitengeluiden wanneer de speler de binnenruimtes betreedt. Draagt bij aan sfeer/realisme omgevingsgeluiden.
