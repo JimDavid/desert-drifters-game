@@ -36,8 +36,6 @@ public class CameraPanAim : MonoBehaviour
             while (thirdPersonFollow.CameraSide < maxRight)
             {
                 thirdPersonFollow.CameraSide += panSpeed * Time.deltaTime;
-
-                //yield on a new YieldInstruction that waits for 5 seconds.
                 yield return new WaitForSeconds(0.01f);
             }   
         }
@@ -47,8 +45,6 @@ public class CameraPanAim : MonoBehaviour
             while (thirdPersonFollow.CameraSide > maxLeft)
             {
                 thirdPersonFollow.CameraSide -= panSpeed * Time.deltaTime;
-
-                //yield on a new YieldInstruction that waits for 5 seconds.
                 yield return new WaitForSeconds(0.01f);
             }
         }
