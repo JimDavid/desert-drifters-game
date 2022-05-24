@@ -16,15 +16,12 @@ public class CameraPanAim : MonoBehaviour
         var thirdPersonFollow = aimVirtualCamera.GetCinemachineComponent<Cinemachine3rdPersonFollow>();
         var POV = aimVirtualCamera.GetCinemachineComponent<CinemachinePOV>();
         Vector3 mousePos = Input.mousePosition;
-        //Vector screenCenterPoint = new Vector(Screen.width / 2f);
-        //POV.m_HorizontalAxis = 90; 
 
         if (Input.GetMouseButton(1) && mousePos.x > (Screen.width / 2f))
         {
             StopCoroutine(DecreaseCoroutine());
             StartCoroutine(IncreaseCoroutine());
             pC.anim.SetBool("isRAimWalkMirror", true);
-            //pC.anim.SetBool("isRAimIdleMirror", true);
         }
 
         else if (Input.GetMouseButton(1) && mousePos.x < (Screen.width / 2f))
@@ -32,7 +29,6 @@ public class CameraPanAim : MonoBehaviour
             StopCoroutine(IncreaseCoroutine());
             StartCoroutine(DecreaseCoroutine());
             pC.anim.SetBool("isRAimWalkMirror", false);
-            //pC.anim.SetBool("isRAimIdleMirror", false);
         }
 
         IEnumerator IncreaseCoroutine()
@@ -43,9 +39,7 @@ public class CameraPanAim : MonoBehaviour
 
                 //yield on a new YieldInstruction that waits for 5 seconds.
                 yield return new WaitForSeconds(0.01f);
-
-            }
-            
+            }   
         }
 
         IEnumerator DecreaseCoroutine()
@@ -56,11 +50,7 @@ public class CameraPanAim : MonoBehaviour
 
                 //yield on a new YieldInstruction that waits for 5 seconds.
                 yield return new WaitForSeconds(0.01f);
-
             }
-            
         }
-
-
     }
     }
